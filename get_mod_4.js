@@ -1,2 +1,3 @@
 var get_mod = require('./module');
-get_mod('Bone Kyaw');
+get_mod.help('Bone Kyaw');
+get_mod.result();
