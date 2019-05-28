@@ -2,8 +2,8 @@ var event = require('events');
 
 var eventEmitterListener = new event.EventEmitter();
 
-eventEmitterListener.on('HiEvent', function () {
-	console.log('I catch event, ha ha ...');
+eventEmitterListener.on('HiEvent', function (val) {
+	console.log(`I catch event, ha ha ... ${val}`);
 })
 
 var i = 0;
@@ -14,7 +14,7 @@ var inter = setInterval(function(){
 	}
 
 	if ((i%3) == 0) {
-		eventEmitterListener.emit('HiEvent');
+		eventEmitterListener.emit('HiEvent','Bone Kyaw');
 	} else {
 		console.log('Waiting event ...');
 	}
